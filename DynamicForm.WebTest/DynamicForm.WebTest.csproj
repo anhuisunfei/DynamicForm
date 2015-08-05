@@ -1,0 +1,1351 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{92604F2B-CACD-4EFD-8236-EA55BE43497C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DynamicForm.WebTest</RootNamespace>
+    <AssemblyName>DynamicForm.WebTest</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.3.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PersonInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\avatars\avatar.png" />
+    <Content Include="assets\avatars\avatar1.png" />
+    <Content Include="assets\avatars\avatar2.png" />
+    <Content Include="assets\avatars\avatar3.png" />
+    <Content Include="assets\avatars\avatar4.png" />
+    <Content Include="assets\avatars\avatar5.png" />
+    <Content Include="assets\avatars\profile-pic.jpg" />
+    <Content Include="assets\avatars\user.jpg" />
+    <Content Include="assets\css\ace-fonts.css" />
+    <Content Include="assets\css\ace-ie.min.css" />
+    <Content Include="assets\css\ace-responsive.min.css" />
+    <Content Include="assets\css\ace-skins.min.css" />
+    <Content Include="assets\css\ace.min.css" />
+    <Content Include="assets\css\bootstrap-editable.css" />
+    <Content Include="assets\css\bootstrap-responsive.min.css" />
+    <Content Include="assets\css\bootstrap-timepicker.css" />
+    <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\chosen-sprite%402x.png" />
+    <Content Include="assets\css\chosen-sprite.png" />
+    <Content Include="assets\css\chosen.css" />
+    <Content Include="assets\css\chosen.min.css" />
+    <Content Include="assets\css\colorbox.css" />
+    <Content Include="assets\css\colorpicker.css" />
+    <Content Include="assets\css\datepicker.css" />
+    <Content Include="assets\css\daterangepicker.css" />
+    <Content Include="assets\css\dropzone.css" />
+    <Content Include="assets\css\font-awesome-ie7.min.css" />
+    <Content Include="assets\css\font-awesome.min.css" />
+    <Content Include="assets\css\fullcalendar.css" />
+    <Content Include="assets\css\fullcalendar.print.css" />
+    <Content Include="assets\css\images\border.png" />
+    <Content Include="assets\css\images\border1.png" />
+    <Content Include="assets\css\images\border2.png" />
+    <Content Include="assets\css\images\controls.png" />
+    <Content Include="assets\css\images\ie6\borderBottomCenter.png" />
+    <Content Include="assets\css\images\ie6\borderBottomLeft.png" />
+    <Content Include="assets\css\images\ie6\borderBottomRight.png" />
+    <Content Include="assets\css\images\ie6\borderMiddleLeft.png" />
+    <Content Include="assets\css\images\ie6\borderMiddleRight.png" />
+    <Content Include="assets\css\images\ie6\borderTopCenter.png" />
+    <Content Include="assets\css\images\ie6\borderTopLeft.png" />
+    <Content Include="assets\css\images\ie6\borderTopRight.png" />
+    <Content Include="assets\css\images\loading.gif" />
+    <Content Include="assets\css\images\loading_background.png" />
+    <Content Include="assets\css\images\overlay.png" />
+    <Content Include="assets\css\img\alpha.png" />
+    <Content Include="assets\css\img\hue.png" />
+    <Content Include="assets\css\img\saturation.png" />
+    <Content Include="assets\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="assets\css\jquery-ui-1.10.3.full.min.css" />
+    <Content Include="assets\css\jquery.gritter.css" />
+    <Content Include="assets\css\prettify.css" />
+    <Content Include="assets\css\select2-spinner.gif" />
+    <Content Include="assets\css\select2.css" />
+    <Content Include="assets\css\select2.png" />
+    <Content Include="assets\css\select2x2.png" />
+    <Content Include="assets\css\ui.jqgrid.css" />
+    <Content Include="assets\css\uncompressed\ace-ie.css" />
+    <Content Include="assets\css\uncompressed\ace-responsive.css" />
+    <Content Include="assets\css\uncompressed\ace-skins.css" />
+    <Content Include="assets\css\uncompressed\ace.css" />
+    <Content Include="assets\css\uncompressed\bootstrap-responsive.css" />
+    <Content Include="assets\css\uncompressed\bootstrap.css" />
+    <Content Include="assets\css\uncompressed\chosen.css" />
+    <Content Include="assets\css\uncompressed\font-awesome-ie7.css" />
+    <Content Include="assets\css\uncompressed\font-awesome.css" />
+    <Content Include="assets\css\uncompressed\jquery-ui-1.10.3.custom.css" />
+    <Content Include="assets\font\fontawesome-webfont.svg" />
+    <Content Include="assets\images\back_disabled.png" />
+    <Content Include="assets\images\back_enabled.png" />
+    <Content Include="assets\images\back_enabled_hover.png" />
+    <Content Include="assets\images\forward_disabled.png" />
+    <Content Include="assets\images\forward_enabled.png" />
+    <Content Include="assets\images\forward_enabled_hover.png" />
+    <Content Include="assets\images\gallery\image-1.jpg" />
+    <Content Include="assets\images\gallery\image-2.jpg" />
+    <Content Include="assets\images\gallery\image-3.jpg" />
+    <Content Include="assets\images\gallery\image-4.jpg" />
+    <Content Include="assets\images\gallery\image-5.jpg" />
+    <Content Include="assets\images\gallery\image-6.jpg" />
+    <Content Include="assets\images\gallery\thumb-1.jpg" />
+    <Content Include="assets\images\gallery\thumb-2.jpg" />
+    <Content Include="assets\images\gallery\thumb-3.jpg" />
+    <Content Include="assets\images\gallery\thumb-4.jpg" />
+    <Content Include="assets\images\gallery\thumb-5.jpg" />
+    <Content Include="assets\images\gallery\thumb-6.jpg" />
+    <Content Include="assets\images\sort_asc.png" />
+    <Content Include="assets\images\sort_asc_disabled.png" />
+    <Content Include="assets\images\sort_both.png" />
+    <Content Include="assets\images\sort_desc.png" />
+    <Content Include="assets\images\sort_desc_disabled.png" />
+    <Content Include="assets\images\spritemap%402x.png" />
+    <Content Include="assets\images\spritemap.png" />
+    <Content Include="assets\img\clear.png" />
+    <Content Include="assets\img\glyphicons-halflings-white.png" />
+    <Content Include="assets\img\glyphicons-halflings.png" />
+    <Content Include="assets\img\loading.gif" />
+    <Content Include="assets\js\ace-elements.min.js" />
+    <Content Include="assets\js\ace-extra.min.js" />
+    <Content Include="assets\js\ace.min.js" />
+    <Content Include="assets\js\additional-methods.min.js" />
+    <Content Include="assets\js\bootbox.min.js" />
+    <Content Include="assets\js\bootstrap-colorpicker.min.js" />
+    <Content Include="assets\js\bootstrap-tag.min.js" />
+    <Content Include="assets\js\bootstrap-wysiwyg.min.js" />
+    <Content Include="assets\js\bootstrap.min.js" />
+    <Content Include="assets\js\chosen.jquery.min.js" />
+    <Content Include="assets\js\date-time\bootstrap-datepicker.min.js" />
+    <Content Include="assets\js\date-time\bootstrap-timepicker.min.js" />
+    <Content Include="assets\js\date-time\daterangepicker.min.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.da.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.de.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.el.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.es.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.he.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.id.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.is.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.it.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.th.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="assets\js\date-time\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="assets\js\date-time\moment.min.js" />
+    <Content Include="assets\js\dropzone.min.js" />
+    <Content Include="assets\js\excanvas.min.js" />
+    <Content Include="assets\js\flot\jquery.flot.min.js" />
+    <Content Include="assets\js\flot\jquery.flot.pie.min.js" />
+    <Content Include="assets\js\flot\jquery.flot.resize.min.js" />
+    <Content Include="assets\js\fuelux\data\fuelux.tree-sampledata.js" />
+    <Content Include="assets\js\fuelux\fuelux.spinner.min.js" />
+    <Content Include="assets\js\fuelux\fuelux.tree.min.js" />
+    <Content Include="assets\js\fuelux\fuelux.wizard.min.js" />
+    <Content Include="assets\js\fullcalendar.js" />
+    <Content Include="assets\js\fullcalendar.min.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ar.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-bg.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-bg1251.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-cat.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-cn.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-cs.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-da.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-de.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-dk.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-el.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-en.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-es.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-fa.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-fi.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-fr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-gl.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-he.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-hr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-hr1250.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-hu.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-id.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-is.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-it.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ja.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-kr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-lt.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-mne.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-nl.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-no.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-pl.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-pt-br.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-pt.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ro.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ru.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sk.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sr-latin.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-sv.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-th.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-tr.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-tw.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-ua.js" />
+    <Content Include="assets\js\jqGrid\i18n\grid.locale-vi.js" />
+    <Content Include="assets\js\jqGrid\jquery.jqGrid.min.js" />
+    <Content Include="assets\js\jquery-1.10.2.min.js" />
+    <Content Include="assets\js\jquery-2.0.3.min.js" />
+    <Content Include="assets\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="assets\js\jquery-ui-1.10.3.full.min.js" />
+    <Content Include="assets\js\jquery-ui-datepicker-zh-CN.js" />
+    <Content Include="assets\js\jquery.autosize-min.js" />
+    <Content Include="assets\js\jquery.colorbox-min.js" />
+    <Content Include="assets\js\jquery.dataTables.bootstrap.js" />
+    <Content Include="assets\js\jquery.dataTables.min.js" />
+    <Content Include="assets\js\jquery.easy-pie-chart.min.js" />
+    <Content Include="assets\js\jquery.gritter.min.js" />
+    <Content Include="assets\js\jquery.hotkeys.min.js" />
+    <Content Include="assets\js\jquery.inputlimiter.1.3.1.min.js" />
+    <Content Include="assets\js\jquery.knob.min.js" />
+    <Content Include="assets\js\jquery.maskedinput.min.js" />
+    <Content Include="assets\js\jquery.mobile.custom.min.js" />
+    <Content Include="assets\js\jquery.nestable.min.js" />
+    <Content Include="assets\js\jquery.slimscroll.min.js" />
+    <Content Include="assets\js\jquery.sparkline.min.js" />
+    <Content Include="assets\js\jquery.ui.touch-punch.min.js" />
+    <Content Include="assets\js\jquery.validate.min.js" />
+    <Content Include="assets\js\markdown\bootstrap-markdown.min.js" />
+    <Content Include="assets\js\markdown\markdown.min.js" />
+    <Content Include="assets\js\markdown\to-markdown.min.js" />
+    <Content Include="assets\js\prettify.js" />
+    <Content Include="assets\js\select2.min.js" />
+    <Content Include="assets\js\spin.min.js" />
+    <Content Include="assets\js\uncompressed\ace-elements.js" />
+    <Content Include="assets\js\uncompressed\ace-extra.js" />
+    <Content Include="assets\js\uncompressed\ace.js" />
+    <Content Include="assets\js\uncompressed\additional-methods.js" />
+    <Content Include="assets\js\uncompressed\bootbox.js" />
+    <Content Include="assets\js\uncompressed\bootstrap-colorpicker.js" />
+    <Content Include="assets\js\uncompressed\bootstrap-tag.js" />
+    <Content Include="assets\js\uncompressed\bootstrap-wysiwyg.js" />
+    <Content Include="assets\js\uncompressed\bootstrap.js" />
+    <Content Include="assets\js\uncompressed\chosen.jquery.js" />
+    <Content Include="assets\js\uncompressed\date-time\bootstrap-datepicker.js" />
+    <Content Include="assets\js\uncompressed\date-time\bootstrap-timepicker.js" />
+    <Content Include="assets\js\uncompressed\date-time\daterangepicker.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.bg.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.ca.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.cs.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.da.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.de.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.el.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.es.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.fi.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.fr.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.he.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.hr.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.hu.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.id.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.is.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.it.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.ja.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.kr.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.lt.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.lv.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.ms.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.nb.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.nl.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.pl.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.pt-BR.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.pt.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.ro.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.rs-latin.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.rs.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.ru.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.sk.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.sl.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.sv.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.sw.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.th.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.tr.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.uk.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.zh-CN.js" />
+    <Content Include="assets\js\uncompressed\date-time\locales\bootstrap-datepicker.zh-TW.js" />
+    <Content Include="assets\js\uncompressed\date-time\moment.js" />
+    <Content Include="assets\js\uncompressed\excanvas.js" />
+    <Content Include="assets\js\uncompressed\flot\jquery.flot.js" />
+    <Content Include="assets\js\uncompressed\flot\jquery.flot.pie.js" />
+    <Content Include="assets\js\uncompressed\flot\jquery.flot.resize.js" />
+    <Content Include="assets\js\uncompressed\fuelux\data\fuelux.tree-sampledata.js" />
+    <Content Include="assets\js\uncompressed\fuelux\fuelux.spinner.js" />
+    <Content Include="assets\js\uncompressed\fuelux\fuelux.tree.js" />
+    <Content Include="assets\js\uncompressed\fuelux\fuelux.wizard.js" />
+    <Content Include="assets\js\uncompressed\fullcalendar.js" />
+    <Content Include="assets\js\uncompressed\jquery-1.10.2.js" />
+    <Content Include="assets\js\uncompressed\jquery-2.0.3.js" />
+    <Content Include="assets\js\uncompressed\jquery-ui-1.10.3.custom.js" />
+    <Content Include="assets\js\uncompressed\jquery.autosize.js" />
+    <Content Include="assets\js\uncompressed\jquery.colorbox.js" />
+    <Content Include="assets\js\uncompressed\jquery.dataTables.js" />
+    <Content Include="assets\js\uncompressed\jquery.easy-pie-chart.js" />
+    <Content Include="assets\js\uncompressed\jquery.gritter.js" />
+    <Content Include="assets\js\uncompressed\jquery.hotkeys.js" />
+    <Content Include="assets\js\uncompressed\jquery.inputlimiter.1.3.1.js" />
+    <Content Include="assets\js\uncompressed\jquery.knob.js" />
+    <Content Include="assets\js\uncompressed\jquery.maskedinput.js" />
+    <Content Include="assets\js\uncompressed\jquery.mobile.custom.js" />
+    <Content Include="assets\js\uncompressed\jquery.slimscroll.js" />
+    <Content Include="assets\js\uncompressed\jquery.sparkline.js" />
+    <Content Include="assets\js\uncompressed\jquery.ui.touch-punch.js" />
+    <Content Include="assets\js\uncompressed\jquery.validate.js" />
+    <Content Include="assets\js\uncompressed\markdown\bootstrap-markdown.js" />
+    <Content Include="assets\js\uncompressed\markdown\markdown.js" />
+    <Content Include="assets\js\uncompressed\markdown\to-markdown.js" />
+    <Content Include="assets\js\uncompressed\select2.js" />
+    <Content Include="assets\js\uncompressed\spin.js" />
+    <Content Include="assets\js\uncompressed\x-editable\ace-editable.js" />
+    <Content Include="assets\js\uncompressed\x-editable\bootstrap-editable.js" />
+    <Content Include="assets\js\x-editable\ace-editable.min.js" />
+    <Content Include="assets\js\x-editable\bootstrap-editable.min.js" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\calendar.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\calendar.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\calendar_init.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\event.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\img\callt.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\img\calrt.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\img\calx.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\license.txt" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\calendar\YAHOO.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxcommon.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxeditor.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxform_item_colorpicker.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxform_item_upload.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxgrid.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxgrid.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxgrid2.5.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxgridcell.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxgrid_skins.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxlayout.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxmenu.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtoolbar.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtree.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtree.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtree1.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtree2.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtreegrid.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtreegrid_lines.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtreegrid_property.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxtreegrid_property.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlxwindows.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\dhtmlx_custom.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_calc.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_3but.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_acheck.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_calck.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_calendar.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_clist.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_cntr.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_combo.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_context.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_dec.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_dhxcalendar.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_grid.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_limit.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_link.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_liveedit.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_mro.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_passw.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_ra_str.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_sub_row.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_time.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_tree.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\excells\dhtmlxgrid_excell_wbut.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_data.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_deprecated.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_drag.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_export.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_fast.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_filter.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_form.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_group.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_hextra.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_hmenu.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_hmenu.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_json.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_keymap_access.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_keymap_excel.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_keymap_extra.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_markers.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_math.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_mcol.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_nxml.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_over.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_pgn.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_pgn_bricks.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_pivot.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_post.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_rowspan.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_selection.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_splt.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_srnd.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_ssc.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_start.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_undo.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxgrid_validation.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtreegrid_filter.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtreegrid_lines.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtreegrid_property.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtreegrid_property.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_attrs.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_dragin.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_ed.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_er.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_json.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_kn.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_lf.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_li.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_rl.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_sb.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_srnd.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_start.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlxtree_xw.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlx_extdrag.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\ext\dhtmlx_extdrag.js" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\arrow_collapse.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\arrow_expand.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_left.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_left_abs.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_left_abs_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_left_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_right.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_right_abs.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_right_abs_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\ar_right_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\blanc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\blank-1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\but_cut.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\combo_select.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\combo_select_dhx_black.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\combo_select_dhx_blue.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\combo_select_dhx_skyblue.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\blanc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\book.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\book_titel.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\but_cut.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\close2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\folder.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconSafe.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line1_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line2_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line3_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\line4_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus2_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus3_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus4_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\minus5_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus2_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus3_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus4_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\plus5_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\sort_asc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\sort_desc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluebooks\tombs.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconCheckAll_2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconFlag.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconGraph.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconSound.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconTexts.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconWrite1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\iconWrite2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_bluefolders\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\tombs.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_books\tombs_open.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconFlag.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconGraph.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconSound.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconTexts.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconWrite1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\iconWrite2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_skyblue\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconFlag.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconGraph.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconSound.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconTexts.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconWrite1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\iconWrite2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\leaves.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_dhx_terrace\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconFlag.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconGraph.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconSound.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconTexts.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconWrite1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\iconWrite2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\safe_close.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_scbrblue\safe_open.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconFlag.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconGraph.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconSound.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconTexts.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconWrite1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\iconWrite2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_vista\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconChecked.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconFlag.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconGraph.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconSound.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconTexts.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconWrite1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\iconWrite2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\leaves.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_winstyle\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\books_close.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\books_open.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\iconText.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\leaf2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\leaf3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\leaf_2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\tombs.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\csh_yellowbooks\tombs_open.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhtmlxcalendar_dhx_web\arrow_left.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhtmlxcalendar_dhx_web\arrow_left_hover.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhtmlxcalendar_dhx_web\arrow_right.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhtmlxcalendar_dhx_web\arrow_right_hover.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhtmlxcalendar_dhx_web\bg_days.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhtmlxcalendar_dhx_web\bg_main.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxaccord_dhx_web\dhxacc_bg.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxaccord_dhx_web\dhxacc_btns.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxeditor_dhx_web\dhxeditor_bg_lite.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxform_dhx_web\dhxform_btns.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxform_dhx_web\dhxform_chbxrd.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_dhx_black\hdr.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_dhx_blue\hdr.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_dhx_skyblue\arrow.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_dhx_skyblue\asteriks.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_dhx_skyblue\rowselector.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_dhx_web\separator.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\grid-bkg-issue.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\grid-bkg-purp.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\grid-bkg-reviews.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\grid-bkg-set.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\grid-bkg-xpert.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\highlight33-CL.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\hilight1-33high.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_e2ks\kpac-grid-150.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_glassy_blue\ftr.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxgrid_glassy_blue\hdr.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxlayout_dhx_web\dhxlayout_bg_sb.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxlayout_dhx_web\dhxlayout_btns.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxlayout_dhx_web\dhxlayout_drag_hor.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxlayout_dhx_web\dhxlayout_drag_ver.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxmenu_dhx_web\dhxmenu_subselbg.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxmenu_dhx_web\dhxmenu_topbg.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxmenu_dhx_web\dhxmenu_topselbg.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxtoolbar_dhx_web\dhxtoolbar_imgs.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxtoolbar_dhx_web\dhxtoolbar_sliderbg.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxtoolbar_dhx_web\dhxtoolbar_sliderpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxwins_dhx_web\active\progress.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxwins_dhx_web\buttons.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhxwins_dhx_web\inactive\progress.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhx_simple_sep.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhx_web\dhx_web_bottom.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhx_web\dhx_web_left.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhx_web\dhx_web_right.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dhx_web\dhx_web_top.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dyn_.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dyn_down.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\dyn_up.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\false.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\folder.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\folderClosed.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\folderOpen.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\green.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\header_bg.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\header_bg_60.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\iconCheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\iconCheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\iconCheckGray.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\blanc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\book.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\books.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\books_cat.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\cd.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\dvd.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\dvds.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\item_chk0.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\item_chk0_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\item_chk1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\item_chk1_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\music.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\radio_chk0.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\radio_chk0_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\radio_chk1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\radio_chk1_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\sort_asc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_books\sort_desc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\blanc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\blank-1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\blank.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\folder.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\item_chk0.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\item_chk0_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\item_chk1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\item_chk1_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\parameter.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\radio_chk0.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\radio_chk0_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\radio_chk1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\radio_chk1_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\sort_asc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\icons_greenfolders\sort_desc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\iconUncheckAll.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\iconUncheckDis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\imageloaderror.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\item_chk0.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\item_chk0_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\item_chk1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\item_chk1_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\leaf.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line1_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line2_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line3_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\line4_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\lock.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus2_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus3_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus4_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus5_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\minus_ar.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\p-view-grid-bkg.jpg" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus2.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus2_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus3.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus3_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus4.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus4_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus5.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus5_rtl.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\plus_ar.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\radio_chk0.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\radio_chk0_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\radio_chk1.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\radio_chk1_dis.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\radio_off.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\radio_on.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\red.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\results.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinA_header.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinB_header.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinC_header.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinC_top_left.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinC_top_right.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinD_bottom_left.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinD_bottom_right.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skinD_header.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skin_light_header.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\skin_modern_header.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\sky_blue_grid.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\sky_blue_sel.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\sky_blue_sel2.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\sky_blue_sel_tree.png" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\sort_asc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\sort_desc.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\imgs\true.gif" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\skins\dhtmlxgrid_dhx_black.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\skins\dhtmlxgrid_dhx_blue.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\skins\dhtmlxgrid_dhx_skyblue.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\skins\dhtmlxgrid_dhx_terrace.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\skins\dhtmlxgrid_dhx_web.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\skins\dhtmlxgrid_e2ks.css" />
+    <Content Include="dhtmlxv36Pro\dhtmlxv36Pro\style.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="assets\css\less\ace-nav.less" />
+    <Content Include="assets\css\less\ace.less" />
+    <Content Include="assets\css\less\basic.less" />
+    <Content Include="assets\css\less\bootstrap\variables.less" />
+    <Content Include="assets\css\less\breadcrumbs.less" />
+    <Content Include="assets\css\less\buttons.less" />
+    <Content Include="assets\css\less\dropdown.less" />
+    <Content Include="assets\css\less\ext\bootstrap-tag.less" />
+    <Content Include="assets\css\less\form-checkbox.less" />
+    <Content Include="assets\css\less\form-file.less" />
+    <Content Include="assets\css\less\form.less" />
+    <Content Include="assets\css\less\gallery.less" />
+    <Content Include="assets\css\less\general.less" />
+    <Content Include="assets\css\less\icon-animated.less" />
+    <Content Include="assets\css\less\infobox.less" />
+    <Content Include="assets\css\less\items.less" />
+    <Content Include="assets\css\less\label-badge.less" />
+    <Content Include="assets\css\less\mixins-css3.less" />
+    <Content Include="assets\css\less\mixins.less" />
+    <Content Include="assets\css\less\other.less" />
+    <Content Include="assets\css\less\page.error.less" />
+    <Content Include="assets\css\less\page.inbox.less" />
+    <Content Include="assets\css\less\page.invoice.less" />
+    <Content Include="assets\css\less\page.login.less" />
+    <Content Include="assets\css\less\page.pricing.less" />
+    <Content Include="assets\css\less\page.profile.less" />
+    <Content Include="assets\css\less\page.timeline.less" />
+    <Content Include="assets\css\less\progressbar.less" />
+    <Content Include="assets\css\less\rtl.less" />
+    <Content Include="assets\css\less\searchbox.less" />
+    <Content Include="assets\css\less\sidebar-min.less" />
+    <Content Include="assets\css\less\sidebar.less" />
+    <Content Include="assets\css\less\tab-accordion.less" />
+    <Content Include="assets\css\less\tables.less" />
+    <Content Include="assets\css\less\thirdparty-calendar.less" />
+    <Content Include="assets\css\less\thirdparty-chosen.less" />
+    <Content Include="assets\css\less\thirdparty-colorbox.less" />
+    <Content Include="assets\css\less\thirdparty-dropzone.less" />
+    <Content Include="assets\css\less\thirdparty-editable.less" />
+    <Content Include="assets\css\less\thirdparty-fuelux.less" />
+    <Content Include="assets\css\less\thirdparty-gritter.less" />
+    <Content Include="assets\css\less\thirdparty-jqgrid.less" />
+    <Content Include="assets\css\less\thirdparty-jquery-ui.less" />
+    <Content Include="assets\css\less\thirdparty-nestable.less" />
+    <Content Include="assets\css\less\thirdparty-select2.less" />
+    <Content Include="assets\css\less\thirdparty-slider.less" />
+    <Content Include="assets\css\less\thirdparty-wysiwyg.less" />
+    <Content Include="assets\css\less\tooltip-popover.less" />
+    <Content Include="assets\css\less\utility.less" />
+    <Content Include="assets\css\less\variables.less" />
+    <Content Include="assets\css\less\widget.less" />
+    <Content Include="assets\font\cJZKeOuBrn4kERxqtaUH3T8E0i7KZn-EPnyo3HZu7kw.woff" />
+    <Content Include="assets\font\DXI1ORHCpsQm3Vp6mXoaTXhCUOGz7vYGh680lGh-uXM.woff" />
+    <Content Include="assets\font\fontawesome-webfont.eot" />
+    <Content Include="assets\font\fontawesome-webfont.ttf" />
+    <Content Include="assets\font\fontawesome-webfont.woff" />
+    <Content Include="assets\font\FontAwesome.otf" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config" />
+    <Content Include="packages.config" />
+    <None Include="readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DynamicForm.Core\DynamicForm.Core.csproj">
+      <Project>{45eed11c-5c27-4b9c-a4d3-600f8f14b193}</Project>
+      <Name>DynamicForm.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>28519</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:17895/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

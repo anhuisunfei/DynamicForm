@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rows>
+  <head>
+    <column id="z5" width="50" type="dyn" align="right" color="white" sort="str">Sales</column>
+    <column width="150" type="ed" align="left" color="#d5f1ff" sort="str">Book Title</column>
+    <column width="100" type="ed" align="left" color="#d5f1ff" sort="str">Author</column>
+    <column width="80" type="price" align="right" sort="str">Price</column>
+    <column width="80" type="ch" align="center" sort="str">In Store</column>
+    <column width="80" type="co" align="left" sort="str">
+      Shipping
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">10</option>
+      <option value="5">20</option>
+      <option value="6">30</option>
+    </column>
+    <column width="80" type="ra" align="center" sort="str">Bestseller</column>
+    <column width="200" type="ro" align="center" sort="str">Date of Publication</column>
+    <settings>
+      <colwidth>px</colwidth>
+    </settings>
+
+    <afterInit>
+      <call command="attachHeader">
+        <param>1,#cspan,3,#cspan,5,#cspan,7,#cspan</param>
+      </call>
+      <call command="attachHeader">
+        <param>1,2,3,4,5,6,7,8</param>
+      </call>
+      <call command="attachFooter">
+        <param>1,#cspan,3,#cspan,5,#cspan,7,#cspan</param>
+      </call>
+    </afterInit>
+  </head>
+  <row id="1">
+    <cell>-1500</cell>
+    <cell>A Time to Kill</cell>
+    <cell>John Grisham</cell>
+    <cell>12.99</cell>
+    <cell>1</cell>
+    <cell>24</cell>
+    <cell>0</cell>
+    <cell>05/01/1998</cell>
+  </row>
+</rows>

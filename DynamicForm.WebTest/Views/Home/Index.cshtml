@@ -1,0 +1,27 @@
+﻿@model DynamicForm.WebTest.Models.Person
+
+@using DynamicForm.Core.Helper;
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="breadcrumbs" id="breadcrumbs">
+    <ul class="breadcrumb">
+        <li>&nbsp;首页<span class="divider"><i class="icon-double-angle-right"></i></span></li>
+        <li class="active">@ViewBag.Title</li>
+    </ul>
+    <!--.breadcrumb-->
+</div>
+<div class="page-content">
+    <div class="row-fluid">
+        <div class="span12">
+            <!--PAGE CONTENT BEGINS-->
+            <div class="table-header">
+                @ViewBag.Title
+            </div>
+            <hr />
+            <form id="formCommonReimbursement" onsubmit="return false" class="form-horizontal">
+                @Html.GenerateValidateEngineForm() 
+            </form> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <script src="Scripts/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <button id="btnTest">Test</button>
+    <script type="text/javascript">
+        $(function () {
+            $("#btnTest").click(function () { 
+                $.ajax({
+                    url: 'http://localhost:39474/Home/JsonpDemo',
+                    dataType: 'jsonp',
+                    data: { text: "213242" },
+                    success: function (result) {
+                        alert(result);
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>

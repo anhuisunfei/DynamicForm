@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+     <link href="dhtmlxv36Pro/dhtmlxv36Pro/dhtmlxgrid.css" rel="stylesheet" />
+    <link href="dhtmlxv36Pro/dhtmlxv36Pro/dhtmlx_custom.css" rel="stylesheet" />
+    <script src="dhtmlxv36Pro/dhtmlxv36Pro/dhtmlxcommon.js"></script>
+    <script src="dhtmlxv36Pro/dhtmlxv36Pro/dhtmlxgrid.js"></script>
+    <script src="dhtmlxv36Pro/dhtmlxv36Pro/dhtmlxgridcell.js"></script>
+    <script src="dhtmlxv36Pro/dhtmlxv36Pro/ext/dhtmlxtreegrid_filter.js"></script>
+</head>
+<body>
+    <div id="mygrid"style="width:100%;height:400px;"></div>
+    <input type="file" multiple="multiple" />
+    <script type="text/javascript">
+        var mygrid = new dhtmlXGridObject("mygrid");
+        mygrid.init();
+        mygrid.clearAndLoad('/Home/GetDhtmlxGrid');
+    </script>
+</body>
+</html>
